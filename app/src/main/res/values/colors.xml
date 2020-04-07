@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+
+    <color name="Primary">@color/orange</color>
+    <color name="PrimaryDark">@color/orangeLight</color>
+    <color name="Secondary">@color/white</color>
+    <color name="SecondaryDark">@color/whiteLight</color>
+    <color name="Accent">@color/black</color>
+
+    <color name="PrimaryText">@color/black</color>
+    <color name="PrimaryTextLight">@color/grey</color>
+    <color name="SecondaryText">@color/white</color>
+    <color name="SecondaryTextDark">@color/greyLight</color>
+    <color name="AccentText">@color/orange</color>
+
+    <color name="PrimaryBg">@color/white</color>
+    <color name="PrimaryBgDark">@color/whiteLight</color>
+    <color name="SecondaryBgDark">@color/black</color>
+    <color name="SecondaryBgLight">@color/grey</color>
+    <color name="AccentBg">@color/orange</color>
+    <color name="AccentBgDark">@color/orangeLight</color>
+
+    <color name="orange">#FF7B31</color>
+    <color name="orangeLight">#FFA471</color>
+    <color name="black">#474747</color>
+    <color name="blackLight">#5a5a5a</color>
+    <color name="grey">#afafaf</color>
+    <color name="greyLight">#d6d6d6</color>
+    <color name="whiteLight">#efefef</color>
+    <color name="white">#FFFFFF</color>
+
 </resources>

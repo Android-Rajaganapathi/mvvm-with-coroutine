@@ -1,11 +1,579 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/Primary</item>
+        <item name="colorPrimaryDark">@color/PrimaryDark</item>
+        <item name="colorAccent">@color/Primary</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="background">@color/PrimaryBg</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
     </style>
 
+    <style name="ButtonPositive">
+        <item name="android:src">@drawable/ic_tick</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/SecondaryText</item>
+        <item name="android:background">@drawable/bg_btn_positive</item>
+    </style>
+
+    <style name="ButtonNegative">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/SecondaryText</item>
+        <item name="android:src">@drawable/ic_cross_white</item>
+        <item name="android:background">@drawable/bg_btn_negative</item>
+    </style>
+
+    <style name="OrangeCurved">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:background">@drawable/bg_accent_curved</item>
+    </style>
+
+    <style name="Orange">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:background">@drawable/bg_accent_curved</item>
+    </style>
+
+    <style name="BlackCurved">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:background">@drawable/bg_secondary_curved</item>
+    </style>
+
+    <style name="Black">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:background">@drawable/bg_secondary</item>
+    </style>
+
+    <style name="GreyCurved">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:background">@drawable/bg_grey_curved</item>
+    </style>
+
+    <style name="Grey">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:background">@drawable/bg_grey</item>
+    </style>
+
+    <style name="HorizontalLineGrey">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/grey</item>
+    </style>
+
+    <style name="HorizontalLineWhite">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/SecondaryText</item>
+    </style>
+
+    <style name="HorizontalLineBlack">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@color/SecondaryBgDark</item>
+    </style>
+
+    <style name="VerticalLineGrey">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/grey</item>
+    </style>
+
+    <style name="VerticalLineWhite">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/SecondaryText</item>
+    </style>
+
+    <style name="VerticalLineBlack">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/SecondaryBgDark</item>
+    </style>
+
+    <style name="MenuButtonStyle">
+        <item name="fab_size">normal</item>
+        <item name="fab_shadowColor">#444</item>
+        <item name="fab_colorNormal">@color/AccentBg</item>
+        <item name="fab_colorPressed">@color/AccentBg</item>
+        <item name="fab_colorRipple">@color/AccentBgDark</item>
+    </style>
+
+    <!--    Font style     -->
+    <style name="Bold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="Medium">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+    <!--    End Font style     -->
+
+    <!--    Font colors     -->
+    <style name="PrimaryTextLight">
+        <item name="android:textColor">@color/PrimaryTextLight</item>
+    </style>
+
+    <style name="PrimaryText">
+        <item name="android:textColor">@color/PrimaryText</item>
+    </style>
+
+    <style name="SecondaryText">
+        <item name="android:textColor">@color/SecondaryText</item>
+    </style>
+
+    <style name="SecondaryTextDark">
+        <item name="android:textColor">@color/SecondaryTextDark</item>
+    </style>
+
+    <style name="AccentText">
+        <item name="android:textColor">@color/AccentText</item>
+    </style>
+    <!--    End of Font colors     -->
+
+    <!--    Font Bold     -->
+    <style name="Bold.PrimaryTextLight">
+        <item name="android:textColor">@color/PrimaryTextLight</item>
+    </style>
+
+    <style name="Bold.PrimaryText">
+        <item name="android:textColor">@color/PrimaryText</item>
+    </style>
+
+    <style name="Bold.SecondaryText">
+        <item name="android:textColor">@color/SecondaryText</item>
+    </style>
+
+    <style name="Bold.SecondaryTextDark">
+        <item name="android:textColor">@color/SecondaryTextDark</item>
+    </style>
+
+    <style name="Bold.AccentText">
+        <item name="android:textColor">@color/AccentText</item>
+    </style>
+    <!--    End of Font Bold     -->
+
+    <!--    Font Medium     -->
+    <style name="Medium.PrimaryTextLight">
+        <item name="android:textColor">@color/PrimaryTextLight</item>
+    </style>
+
+    <style name="Medium.PrimaryText">
+        <item name="android:textColor">@color/PrimaryText</item>
+    </style>
+
+    <style name="Medium.SecondaryText">
+        <item name="android:textColor">@color/SecondaryText</item>
+    </style>
+
+    <style name="Medium.SecondaryTextDark">
+        <item name="android:textColor">@color/SecondaryTextDark</item>
+    </style>
+
+    <style name="Medium.AccentText">
+        <item name="android:textColor">@color/AccentText</item>
+    </style>
+    <!--    End of Font Medium     -->
+
+    <!--    Font Color PrimaryTextLight    -->
+    <style name="PrimaryTextLight.xSmall">
+        <item name="android:textSize">@dimen/text_x_small</item>
+    </style>
+
+    <style name="PrimaryTextLight.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="PrimaryTextLight.medium">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="PrimaryTextLight.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="PrimaryTextLight.xLarge">
+        <item name="android:textSize">@dimen/text_x_large</item>
+    </style>
+
+    <style name="PrimaryTextLight.xxLarge">
+        <item name="android:textSize">@dimen/text_xx_large</item>
+    </style>
+    <!--    End of Font Color PrimaryTextLight    -->
+
+    <!--    Font Color PrimaryText    -->
+    <style name="PrimaryText.xSmall">
+        <item name="android:textSize">@dimen/text_x_small</item>
+    </style>
+
+    <style name="PrimaryText.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="PrimaryText.medium">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="PrimaryText.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="PrimaryText.xLarge">
+        <item name="android:textSize">@dimen/text_x_large</item>
+    </style>
+
+    <style name="PrimaryText.xxLarge">
+        <item name="android:textSize">@dimen/text_xx_large</item>
+    </style>
+    <!--    End of Font Color PrimaryText    -->
+
+    <!--    Font Color SecondaryText    -->
+    <style name="SecondaryText.xSmall">
+        <item name="android:textSize">@dimen/text_x_small</item>
+    </style>
+
+    <style name="SecondaryText.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="SecondaryText.medium">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="SecondaryText.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="SecondaryText.xLarge">
+        <item name="android:textSize">@dimen/text_x_large</item>
+    </style>
+
+    <style name="SecondaryText.xxLarge">
+        <item name="android:textSize">@dimen/text_xx_large</item>
+    </style>
+    <!--    End of Font Color SecondaryText    -->
+
+    <!--    Font Color SecondaryTextDark    -->
+    <style name="SecondaryTextDark.xSmall">
+        <item name="android:textSize">@dimen/text_x_small</item>
+    </style>
+
+    <style name="SecondaryTextDark.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="SecondaryTextDark.medium">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="SecondaryTextDark.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="SecondaryTextDark.xLarge">
+        <item name="android:textSize">@dimen/text_x_large</item>
+    </style>
+
+    <style name="SecondaryTextDark.xxLarge">
+        <item name="android:textSize">@dimen/text_xx_large</item>
+    </style>
+    <!--    End of Font Color SecondaryTextDark    -->
+
+    <!--    Font Color AccentText    -->
+    <style name="AccentText.xSmall">
+        <item name="android:textSize">@dimen/text_x_small</item>
+    </style>
+
+    <style name="AccentText.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="AccentText.medium">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="AccentText.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="AccentText.xLarge">
+        <item name="android:textSize">@dimen/text_x_large</item>
+    </style>
+
+    <style name="AccentText.xxLarge">
+        <item name="android:textSize">@dimen/text_xx_large</item>
+    </style>
+    <!--    End of Font Color AccentText    -->
+
+    <!--    Bold Fonts      -->
+    <!--    Font Color PrimaryTextLight    -->
+    <style name="Bold.PrimaryTextLight.xSmall">
+        <item name="android:textSize">@dimen/text_x_small</item>
+    </style>
+
+    <style name="Bold.PrimaryTextLight.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="Bold.PrimaryTextLight.medium">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="Bold.PrimaryTextLight.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="Bold.PrimaryTextLight.xLarge">
+        <item name="android:textSize">@dimen/text_x_large</item>
+    </style>
+
+    <style name="Bold.PrimaryTextLight.xxLarge">
+        <item name="android:textSize">@dimen/text_xx_large</item>
+    </style>
+    <!--    End of Font Color PrimaryTextLight    -->
+
+    <!--    Font Color PrimaryText    -->
+    <style name="Bold.PrimaryText.xSmall">
+        <item name="android:textSize">@dimen/text_x_small</item>
+    </style>
+
+    <style name="Bold.PrimaryText.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="Bold.PrimaryText.medium">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="Bold.PrimaryText.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="Bold.PrimaryText.xLarge">
+        <item name="android:textSize">@dimen/text_x_large</item>
+    </style>
+
+    <style name="Bold.PrimaryText.xxLarge">
+        <item name="android:textSize">@dimen/text_xx_large</item>
+    </style>
+    <!--    End of Font Color PrimaryText    -->
+
+    <!--    Font Color SecondaryText    -->
+    <style name="Bold.SecondaryText.xSmall">
+        <item name="android:textSize">@dimen/text_x_small</item>
+    </style>
+
+    <style name="Bold.SecondaryText.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="Bold.SecondaryText.medium">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="Bold.SecondaryText.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="Bold.SecondaryText.xLarge">
+        <item name="android:textSize">@dimen/text_x_large</item>
+    </style>
+
+    <style name="Bold.SecondaryText.xxLarge">
+        <item name="android:textSize">@dimen/text_xx_large</item>
+    </style>
+    <!--    End of Font Color SecondaryText    -->
+
+    <!--    Font Color SecondaryTextDark    -->
+    <style name="Bold.SecondaryTextDark.xSmall">
+        <item name="android:textSize">@dimen/text_x_small</item>
+    </style>
+
+    <style name="Bold.SecondaryTextDark.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="Bold.SecondaryTextDark.medium">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="Bold.SecondaryTextDark.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="Bold.SecondaryTextDark.xLarge">
+        <item name="android:textSize">@dimen/text_x_large</item>
+    </style>
+
+    <style name="Bold.SecondaryTextDark.xxLarge">
+        <item name="android:textSize">@dimen/text_xx_large</item>
+    </style>
+    <!--    End of Font Color SecondaryTextDark    -->
+
+    <!--    Font Color AccentText    -->
+    <style name="Bold.AccentText.xSmall">
+        <item name="android:textSize">@dimen/text_x_small</item>
+    </style>
+
+    <style name="Bold.AccentText.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="Bold.AccentText.medium">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="Bold.AccentText.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="Bold.AccentText.xLarge">
+        <item name="android:textSize">@dimen/text_x_large</item>
+    </style>
+
+    <style name="Bold.AccentText.xxLarge">
+        <item name="android:textSize">@dimen/text_xx_large</item>
+    </style>
+    <!--    End of Font Color AccentText    -->
+    <!--    End of Bold Fonts      -->
+
+    <!--    Medium Fonts      -->
+    <!--    Font Color PrimaryTextLight    -->
+    <style name="Medium.PrimaryTextLight.xSmall">
+        <item name="android:textSize">@dimen/text_x_small</item>
+    </style>
+
+    <style name="Medium.PrimaryTextLight.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="Medium.PrimaryTextLight.medium">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="Medium.PrimaryTextLight.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="Medium.PrimaryTextLight.xLarge">
+        <item name="android:textSize">@dimen/text_x_large</item>
+    </style>
+
+    <style name="Medium.PrimaryTextLight.xxLarge">
+        <item name="android:textSize">@dimen/text_xx_large</item>
+    </style>
+    <!--    End of Font Color PrimaryTextLight    -->
+
+    <!--    Font Color PrimaryText    -->
+    <style name="Medium.PrimaryText.xSmall">
+        <item name="android:textSize">@dimen/text_x_small</item>
+    </style>
+
+    <style name="Medium.PrimaryText.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="Medium.PrimaryText.medium">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="Medium.PrimaryText.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="Medium.PrimaryText.xLarge">
+        <item name="android:textSize">@dimen/text_x_large</item>
+    </style>
+
+    <style name="Medium.PrimaryText.xxLarge">
+        <item name="android:textSize">@dimen/text_xx_large</item>
+    </style>
+    <!--    End of Font Color PrimaryText    -->
+
+    <!--    Font Color SecondaryText    -->
+    <style name="Medium.SecondaryText.xSmall">
+        <item name="android:textSize">@dimen/text_x_small</item>
+    </style>
+
+    <style name="Medium.SecondaryText.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="Medium.SecondaryText.medium">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="Medium.SecondaryText.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="Medium.SecondaryText.xLarge">
+        <item name="android:textSize">@dimen/text_x_large</item>
+    </style>
+
+    <style name="Medium.SecondaryText.xxLarge">
+        <item name="android:textSize">@dimen/text_xx_large</item>
+    </style>
+    <!--    End of Font Color SecondaryText    -->
+
+    <!--    Font Color SecondaryTextDark    -->
+    <style name="Medium.SecondaryTextDark.xSmall">
+        <item name="android:textSize">@dimen/text_x_small</item>
+    </style>
+
+    <style name="Medium.SecondaryTextDark.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="Medium.SecondaryTextDark.medium">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="Medium.SecondaryTextDark.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="Medium.SecondaryTextDark.xLarge">
+        <item name="android:textSize">@dimen/text_x_large</item>
+    </style>
+
+    <style name="Medium.SecondaryTextDark.xxLarge">
+        <item name="android:textSize">@dimen/text_xx_large</item>
+    </style>
+    <!--    End of Font Color SecondaryTextDark    -->
+
+    <!--    Font Color AccentText    -->
+    <style name="Medium.AccentText.xSmall">
+        <item name="android:textSize">@dimen/text_x_small</item>
+    </style>
+
+    <style name="Medium.AccentText.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="Medium.AccentText.medium">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="Medium.AccentText.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="Medium.AccentText.xLarge">
+        <item name="android:textSize">@dimen/text_x_large</item>
+    </style>
+
+    <style name="Medium.AccentText.xxLarge">
+        <item name="android:textSize">@dimen/text_xx_large</item>
+    </style>
+    <!--    End of Font Color AccentText    -->
+    <!--    End of Medium Fonts      -->
 </resources>

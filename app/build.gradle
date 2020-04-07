@@ -20,7 +20,7 @@ android {
             buildConfigField "int", "FOO", "42"
             buildConfigField "boolean", "LOG", "true"
             buildConfigField "String", "baseUrl", '"https://kaladi.in/saisagar_dev/webservices/"'
-            buildConfigField "String", "dataBasePath", '"/storage/emulated/0/DB/mSalesV5.DB"'
+            buildConfigField "String", "dataBasePath", '"/storage/emulated/0/DB/roomDatabase.DB"'
 
             resValue "string", "app_name", "Mvvm with coroutines"
 
@@ -31,7 +31,7 @@ android {
             buildConfigField "int", "FOO", "42"
             buildConfigField "boolean", "LOG", "true"
             buildConfigField "String", "baseUrl", '"https://kaladi.in/saisagar_dev/webservices/"'
-            buildConfigField "String", "dataBasePath", '"/storage/emulated/0/DB/mSalesV5.DB"'
+            buildConfigField "String", "dataBasePath", '"/storage/emulated/0/DB/roomDatabase.DB"'
 
             resValue "string", "app_name", "Mvvm with coroutines"
 
@@ -41,7 +41,7 @@ android {
     }
     applicationVariants.all { variant ->
         variant.outputs.all {
-            outputFileName = "mSalesV5-${new Date().format('dd_MM_yy')}.apk"
+            outputFileName = "mvvmApp-${new Date().format('dd_MM_yy')}.apk"
         }
     }
     compileOptions {
@@ -79,7 +79,7 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3'
 
     //      For Fragment
-    implementation 'androidx.fragment:fragment-ktx:1.2.3'
+    implementation 'androidx.fragment:fragment-ktx:1.2.4'
 
     //      For Constrain Layout
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
@@ -102,6 +102,8 @@ dependencies {
     //      For Room
     implementation 'androidx.room:room-runtime:2.2.5'
     implementation 'androidx.room:room-ktx:2.2.5'
+    implementation 'androidx.navigation:navigation-fragment:2.2.1'
+    implementation 'androidx.navigation:navigation-ui:2.2.1'
     kapt 'androidx.room:room-compiler:2.2.5'
 
     //      For Preference Manager
@@ -115,4 +117,6 @@ dependencies {
     implementation 'androidx.work:work-runtime-ktx:2.3.4'
     implementation 'androidx.annotation:annotation:1.1.0'
 
+    //      For Lottie Animation
+    implementation 'com.airbnb.android:lottie:3.4.0'
 }

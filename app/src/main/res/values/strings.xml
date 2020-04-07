@@ -1,2 +1,23 @@
 <resources>
+
+    <string name="alert_ok">OK</string>
+    <string name="alert_submit">Submit</string>
+    <string name="alert_cancel">Cancel</string>
+    <string name="alert_retry">Retry</string>
+    <string name="internet_desc">No internet available… :(</string>
+    <string name="no_internet">Check your internet connection</string>
+    <string name="something_went_wrong">Something went wrong on server</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="invalid_name">Name field is empty</string>
+    <string name="invalid_password">Password field is empty</string>
+    <string name="invalid_users">Invalid User</string>
+    <string name="no_users">No users registered</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
 </resources>

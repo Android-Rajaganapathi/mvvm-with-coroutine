@@ -1,50 +1,23 @@
 package com.mvvm.coroutines.data.remote
 
+import com.mvvm.coroutines.data.model.MailResponse
+import com.mvvm.coroutines.data.model.MenuResponse
+import com.mvvm.coroutines.data.model.UserResponse
+import retrofit2.Response
+import retrofit2.http.GET
+
 interface ApiService {
 
-//    //    tab_confirm_api.php?imei_num=866896041663976
-//    @GET("tab_confirm_api.php")
-//    suspend fun getTabConfirmation(
-//        @Query("imei_num") imei: String
-//    ): Response<BaseResponse>
-//
-//    //    setup_api.php?imei_num=866896041663976
-//    //    Only used for backend purpose, no functionality in frontend
-//    @GET("setup_api.php")
-//    suspend fun getSetup(
-//        @Query("imei_num") imei: String
-//    ): Response<LoginResponse>
-//
-//    //    admin_api.php?user_name=admin&password=admin@123
-//    @GET("admin_api.php")
-//    suspend fun getValidateIsAdmin(
-//        @Query("user_name") name: String,
-//        @Query("password") pass: String
-//    ): Response<BaseResponse>
-//
-//    //    tab_confirm_api.php?imei_num=866896041663976
-//    //    This dosen't works good. Simply used for name sake
-//    @GET("tab_confirm_api.php")
-//    suspend fun getForgetPassword(
-//        @Query("imei_num") imei: String
-//    ): Response<BaseResponse>
-//
-//    @GET("masters_api.php")
-//    suspend fun getMasterData(
-//        @Query("sr_code") srCode: String,
-//        @Query("company") company: String
-//    ): Response<MasterResponse>
-//
-//    @GET("masters_api.php")
-//    suspend fun getMasterRDLData(
-//        @Query("sr_code") srCode: String,
-//        @Query("company") company: String
-//    ): Response<MasterResponse>
-//
-//    @POST("transaction_api_new.php")
-//    suspend fun postTransactionNew(@Body request: MasterRequest): Response<BaseResponse>
-//
-//    @POST("transaction_api.php")
-//    suspend fun postTransaction(@Body request: MasterRequest): Response<BaseResponse>
+    //    https://api.androidhive.info/json/contacts.json
+    @GET("json/contacts.json")
+    suspend fun getContacts(): Response<List<UserResponse>>
+
+    //    https://api.androidhive.info/json/shimmer/menu.php
+    @GET("json/shimmer/menu.php")
+    suspend fun getMenu(): Response<List<MenuResponse>>
+
+    //    https://api.androidhive.info/json/inbox.json
+    @GET("json/inbox.json")
+    suspend fun getMail(): Response<List<MailResponse>>
 
 }

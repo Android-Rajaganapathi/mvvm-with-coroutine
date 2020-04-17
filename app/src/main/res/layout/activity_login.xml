@@ -30,6 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/name"
+                android:imeOptions="actionNext"
                 android:text="@={mViewModel.name}" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -47,6 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"
+                android:imeOptions="actionDone"
                 android:text="@={mViewModel.password}" />
         </com.google.android.material.textfield.TextInputLayout>
 

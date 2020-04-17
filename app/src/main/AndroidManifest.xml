@@ -19,9 +19,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".dashboard.DashboardActivity"
-            android:label="@string/title_activity_dashboard"></activity>
         <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,6 +28,7 @@
         </activity>
         <activity android:name=".login.LoginActivity" />
         <activity android:name=".register.RegisterActivity" />
+        <activity android:name=".dashboard.DashboardActivity" />
     </application>
 
 </manifest>

@@ -6,7 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 
-abstract class BaseRecyclerAdapter<T, V : BaseViewHolder<T, *>>(var data: MutableList<T>?) :
+abstract class BaseAdapter<T, V : BaseViewHolder<T, *>>(var data: MutableList<T>?) :
     RecyclerView.Adapter<V>() {
 
     override fun onBindViewHolder(holder: V, position: Int) {
@@ -38,15 +38,12 @@ abstract class BaseRecyclerAdapter<T, V : BaseViewHolder<T, *>>(var data: Mutabl
         notifyItemRemoved(position)
     }
 
-    fun isItemRemoved(position: Int): Boolean {
-        if (data?.size ?: 0 >= position + 1) {
-            data?.removeAt(position)
-            notifyItemRemoved(position)
-            notifyItemRangeChanged(position, itemCount)
-            return true
-        }
-        return false
-    }
+    fun isItemRemoved(position: Int) = if (data?.size ?: 0 >= position + 1) {
+        data?.removeAt(position)
+        notifyItemRemoved(position)
+        notifyItemRangeChanged(position, itemCount)
+        true
+    } else false
 
     private fun resetItems(data: MutableList<T>?) {
         if (data != null) {
@@ -69,10 +66,7 @@ abstract class BaseRecyclerAdapter<T, V : BaseViewHolder<T, *>>(var data: Mutabl
         resetItems(data)
     }
 
-    fun inflateDataBinding(layout: Int, parent: ViewGroup): ViewDataBinding? {
-        return DataBindingUtil.bind(
-            LayoutInflater.from(parent.context)
-                .inflate(layout, parent, false)
-        )
-    }
+    fun inflateDataBinding(layout: Int, parent: ViewGroup): ViewDataBinding? = DataBindingUtil.bind(
+        LayoutInflater.from(parent.context).inflate(layout, parent, false)
+    )
 }

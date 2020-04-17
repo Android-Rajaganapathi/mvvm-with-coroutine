@@ -19,7 +19,7 @@ android {
         debug {
             buildConfigField "int", "FOO", "42"
             buildConfigField "boolean", "LOG", "true"
-            buildConfigField "String", "baseUrl", '"https://kaladi.in/saisagar_dev/webservices/"'
+            buildConfigField "String", "baseUrl", '"https://api.androidhive.info/"'
             buildConfigField "String", "dataBasePath", '"/storage/emulated/0/DB/roomDatabase.DB"'
 
             resValue "string", "app_name", "Mvvm with coroutines"
@@ -30,7 +30,7 @@ android {
         release {
             buildConfigField "int", "FOO", "42"
             buildConfigField "boolean", "LOG", "true"
-            buildConfigField "String", "baseUrl", '"https://kaladi.in/saisagar_dev/webservices/"'
+            buildConfigField "String", "baseUrl", '"https://api.androidhive.info/"'
             buildConfigField "String", "dataBasePath", '"/storage/emulated/0/DB/roomDatabase.DB"'
 
             resValue "string", "app_name", "Mvvm with coroutines"
@@ -68,7 +68,7 @@ dependencies {
     //      For Design
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
-    implementation 'com.google.android.material:material:1.2.0-alpha05'
+    implementation 'com.google.android.material:material:1.2.0-alpha06'
 
     //      For Kodein
     implementation 'org.kodein.di:kodein-di-generic-jvm:6.5.1'
@@ -102,8 +102,6 @@ dependencies {
     //      For Room
     implementation 'androidx.room:room-runtime:2.2.5'
     implementation 'androidx.room:room-ktx:2.2.5'
-    implementation 'androidx.navigation:navigation-fragment:2.2.1'
-    implementation 'androidx.navigation:navigation-ui:2.2.1'
     kapt 'androidx.room:room-compiler:2.2.5'
 
     //      For Preference Manager

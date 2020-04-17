@@ -28,5 +28,6 @@
     <color name="greyLight">#d6d6d6</color>
     <color name="whiteLight">#efefef</color>
     <color name="white">#FFFFFF</color>
+    <color name="orangeBg">#FAE3D5</color>
 
 </resources>

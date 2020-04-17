@@ -1,7 +1,5 @@
 package com.mvvm.coroutines.common
 
-import androidx.work.ListenableWorker
-
 object KodeinModule {
     const val AppModule = "AppModule"
     const val NetworkModule = "NetworkModule"

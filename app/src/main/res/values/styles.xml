@@ -1,12 +1,12 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/Primary</item>
         <item name="colorPrimaryDark">@color/PrimaryDark</item>
         <item name="colorAccent">@color/Primary</item>
         <item name="android:fontFamily">@font/roboto_regular</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+        <!--        <item name="windowActionBar">false</item>-->
+        <!--        <item name="windowNoTitle">true</item>-->
         <item name="background">@color/PrimaryBg</item>
         <item name="android:textCursorDrawable">@drawable/cursor</item>
     </style>
